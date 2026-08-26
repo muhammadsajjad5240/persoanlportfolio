@@ -1,837 +1,755 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js oldie ie8" lang="en"> <![endif]-->
-<!--[if IE 9]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html class="no-js" lang="en">
-  <!--<![endif]-->
-  <head>
-    <!--- basic page needs
-   ================================================== -->
-    <meta charset="utf-8" />
-    <title>M Sajjad</title>
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Muhammad Sajjad — Senior Software Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Muhammad Sajjad — Senior Software Engineer with 6+ years building scalable backends, real-time platforms and IoT-integrated applications in Node.js, NestJS, React, Next.js, Vue and Laravel across fintech, logistics, SaaS and e-learning." />
+<meta name="author" content="Muhammad Sajjad" />
+<meta name="theme-color" content="#0b1020" />
 
-    <!-- mobile specific metas
-   ================================================== -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Muhammad Sajjad — Senior Software Engineer" />
+<meta property="og:description" content="Scalable backends, real-time platforms and IoT-integrated apps. Node.js · NestJS · React · Next.js · Vue · Laravel · AWS · Azure." />
+<meta property="og:url" content="https://muhammadsajjad.vercel.app/" />
+<meta name="twitter:card" content="summary_large_image" />
 
-    <!-- CSS
-   ================================================== -->
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/vendor.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2338bdf8'/%3E%3Cstop offset='1' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230b1020'/%3E%3Crect x='2' y='2' width='60' height='60' rx='13' fill='none' stroke='url(%23g)' stroke-width='2.5'/%3E%3Ctext x='32' y='43' font-family='Segoe UI,Roboto,Arial,sans-serif' font-size='30' font-weight='700' fill='url(%23g)' text-anchor='middle'%3EMS%3C/text%3E%3C/svg%3E" />
+<link rel="preload" as="image" href="img/profile.webp" />
 
-    <!-- script
-   ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
+<style>
+  :root{
+    --bg:#0b1020; --bg-2:#0e1424; --panel:#121a2e; --panel-2:#161f36;
+    --line:#22304f; --line-soft:#1b2740;
+    --text:#e8edf7; --muted:#9aa8c2; --muted-2:#74839f;
+    --accent:#38bdf8; --accent-2:#a855f7; --accent-3:#22d3ee;
+    --grad:linear-gradient(120deg,#38bdf8 0%,#7c5cff 55%,#a855f7 100%);
+    --grad-btn:linear-gradient(120deg,#0ea5e9 0%,#6d28d9 100%);
+    --shadow:0 18px 45px -20px rgba(0,0,0,.7);
+    --radius:16px;
+    --maxw:1140px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:82px;-webkit-text-size-adjust:100%}
+  body{
+    font-family:"Segoe UI",Roboto,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.65;
+    font-size:16px; overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  ::selection{background:rgba(124,92,255,.4)}
+  section{padding:96px 0;position:relative}
+  .wrap{width:calc(100% - 40px);max-width:var(--maxw);margin:0 auto}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--accent-3);
+    padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(56,189,248,.06);
+  }
+  h1,h2,h3,h4{line-height:1.2;font-weight:700;letter-spacing:-.01em}
+  .h-title{font-size:clamp(1.9rem,4.4vw,2.9rem);margin:18px 0 14px}
+  .lead{color:var(--muted);max-width:640px;font-size:1.05rem}
+  .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .center{text-align:center}
+  .center .lead{margin-inline:auto}
 
-    <!-- favicons
-	================================================== -->
-    <link rel="icon" type="image/png" href="images/sajjad.png" />
-  </head>
+  /* buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.95rem;
+    padding:13px 22px;border-radius:12px;border:1px solid transparent;cursor:pointer;
+    transition:transform .15s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease;
+  }
+  .btn svg{width:17px;height:17px}
+  .btn-primary{background:var(--grad-btn);color:#fff;box-shadow:0 12px 30px -12px rgba(124,92,255,.65)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 38px -12px rgba(124,92,255,.75)}
+  .btn-ghost{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.02)}
+  .btn-ghost:hover{border-color:var(--accent);transform:translateY(-2px);background:rgba(56,189,248,.07)}
 
-  <body id="top">
-    <!-- header 
-   ================================================== -->
-    <header>
-      <div class="row">
-        <div class="top-bar">
-          <a class="menu-toggle" href="#"><span>Menu</span></a>
+  /* header / nav */
+  header{
+    position:fixed;inset:0 0 auto 0;z-index:60;
+    background:rgba(11,16,32,0);border-bottom:1px solid transparent;
+    transition:background .3s ease,border-color .3s ease,backdrop-filter .3s ease;
+  }
+  header.scrolled{background:rgba(11,16,32,.82);backdrop-filter:blur(12px);border-bottom-color:var(--line-soft)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:.02em}
+  .brand .mono{
+    width:38px;height:38px;border-radius:11px;display:grid;place-items:center;
+    border:1.5px solid var(--line);background:var(--panel);font-size:.9rem;
+    background-image:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .brand small{display:block;font-weight:500;font-size:.72rem;color:var(--muted-2);letter-spacing:.14em;text-transform:uppercase}
+  .nav-links{display:flex;align-items:center;gap:6px;list-style:none}
+  .nav-links a:not(.btn){
+    padding:9px 14px;border-radius:9px;font-size:.92rem;color:var(--muted);font-weight:500;
+    transition:color .18s ease,background .18s ease;
+  }
+  .nav-links a:not(.btn):hover,.nav-links a:not(.btn).active{color:var(--text);background:rgba(255,255,255,.05)}
+  .nav-cta{margin-left:8px}
+  .nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:9px;cursor:pointer}
+  .nav-toggle span{display:block;width:20px;height:2px;background:var(--text);border-radius:2px}
+  .nav-toggle span+span{margin-top:5px}
 
-          <!-- <div class="logo">
-            <a href="index.html"></a>
-          </div> -->
+  /* hero */
+  #hero{padding:150px 0 90px;overflow:hidden}
+  #hero::before{
+    content:"";position:absolute;inset:0;z-index:-2;
+    background:
+      radial-gradient(680px 420px at 78% 8%,rgba(124,92,255,.22),transparent 60%),
+      radial-gradient(620px 460px at 12% 88%,rgba(56,189,248,.16),transparent 60%),
+      var(--bg);
+  }
+  #hero::after{
+    content:"";position:absolute;inset:0;z-index:-1;opacity:.5;
+    background-image:linear-gradient(var(--line-soft) 1px,transparent 1px),linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);
+    background-size:54px 54px;
+    -webkit-mask-image:radial-gradient(circle at 50% 32%,#000,transparent 72%);
+            mask-image:radial-gradient(circle at 50% 32%,#000,transparent 72%);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .hero-copy h1{font-size:clamp(2.3rem,5.6vw,3.6rem);margin:20px 0 8px}
+  .hero-role{font-size:clamp(1.05rem,2.4vw,1.3rem);color:var(--muted);font-weight:500}
+  .hero-role b{color:var(--text);font-weight:700}
+  .hero-desc{color:var(--muted);margin:20px 0 26px;max-width:560px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:26px}
+  .hero-social{display:flex;gap:12px}
+  .hero-social a{
+    width:42px;height:42px;border:1px solid var(--line);border-radius:11px;display:grid;place-items:center;
+    color:var(--muted);transition:all .18s ease;background:rgba(255,255,255,.02)
+  }
+  .hero-social a:hover{color:var(--text);border-color:var(--accent);transform:translateY(-3px)}
+  .hero-social svg{width:19px;height:19px}
 
-          <nav id="main-nav-wrap">
-            <ul class="main-navigation">
-              <li class="current">
-                <a class="smoothscroll" href="#intro" title="">Home</a>
-              </li>
-              <li><a class="smoothscroll" href="#about" title="">About</a></li>
-              <li>
-                <a class="smoothscroll" href="#resume" title="">Resume</a>
-              </li>
-              <li>
-                <a class="smoothscroll" href="#portfolio" title="">Portfolio</a>
-              </li>
-              <li>
-                <a class="smoothscroll" href="#services" title="">Services</a>
-              </li>
-              <li>
-                <a class="smoothscroll" href="#contact" title="">Contact</a>
-              </li>
-              <li><a href="styles.html" title="">Style Demo</a></li>
-            </ul>
-          </nav>
-        </div>
-        <!-- /top-bar -->
+  .portrait-wrap{position:relative;justify-self:center;width:min(340px,80vw)}
+  .portrait-ring{
+    position:absolute;inset:-14px;border-radius:28px;padding:2px;background:var(--grad);
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;opacity:.9;
+  }
+  .portrait{
+    position:relative;border-radius:24px;overflow:hidden;border:1px solid var(--line);
+    background:linear-gradient(180deg,#1a2440,#0d1425);box-shadow:var(--shadow);
+  }
+  .portrait img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top center}
+  .portrait-badge{
+    position:absolute;left:14px;bottom:14px;right:14px;display:flex;justify-content:space-between;
+    align-items:center;padding:10px 14px;border-radius:12px;font-size:.82rem;
+    background:rgba(9,13,25,.72);backdrop-filter:blur(8px);border:1px solid var(--line);
+  }
+  .portrait-badge b{color:var(--text)}.portrait-badge span{color:var(--muted)}
+  .dot{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 4px rgba(52,211,153,.18);display:inline-block;margin-right:7px}
+
+  .marquee{margin-top:60px;border:1px solid var(--line-soft);border-radius:14px;background:rgba(255,255,255,.02);overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+  .marquee ul{display:flex;gap:38px;list-style:none;padding:14px 24px;width:max-content;animation:scroll 32s linear infinite}
+  .marquee:hover ul{animation-play-state:paused}
+  .marquee li{color:var(--muted);font-weight:600;font-size:.92rem;letter-spacing:.03em;white-space:nowrap}
+  .marquee li::before{content:"◆";color:var(--accent);margin-right:38px;font-size:.7rem;vertical-align:middle}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* stat row */
+  .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+  .stat{border:1px solid var(--line-soft);background:var(--panel);border-radius:14px;padding:22px 20px}
+  .stat b{display:block;font-size:1.8rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat span{color:var(--muted);font-size:.86rem}
+
+  /* generic section head */
+  .sec-head{max-width:720px;margin-bottom:52px}
+  .sec-head.center{margin-inline:auto}
+
+  /* about */
+  #about{background:linear-gradient(180deg,var(--bg),var(--bg-2))}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px}
+  .about-grid p{color:var(--muted);margin-bottom:16px}
+  .facts{list-style:none;margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}
+  .facts li{font-size:.92rem;color:var(--muted);border-left:2px solid var(--line);padding-left:12px}
+  .facts b{display:block;color:var(--text);font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em}
+  .domains{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .domains span{font-size:.85rem;color:var(--text);border:1px solid var(--line);background:var(--panel);padding:8px 14px;border-radius:10px}
+  .domains span i{color:var(--accent);font-style:normal;margin-right:6px}
+
+  /* skills */
+  .skill-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .skill-card{border:1px solid var(--line-soft);background:var(--panel);border-radius:var(--radius);padding:24px;transition:transform .2s ease,border-color .2s ease}
+  .skill-card:hover{transform:translateY(-4px);border-color:var(--line)}
+  .skill-card .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(56,189,248,.1);border:1px solid var(--line);color:var(--accent);margin-bottom:14px}
+  .skill-card .ic svg{width:20px;height:20px}
+  .skill-card h3{font-size:1rem;margin-bottom:12px}
+  .chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chips span{font-size:.8rem;color:var(--muted);background:var(--panel-2);border:1px solid var(--line-soft);padding:5px 10px;border-radius:8px}
+  .skill-card.featured{grid-column:span 3;background:linear-gradient(180deg,var(--panel),var(--bg-2))}
+  .bars{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 36px;margin-top:4px}
+  .bar b{display:flex;justify-content:space-between;font-size:.86rem;font-weight:600;margin-bottom:7px}
+  .bar b span{color:var(--muted-2);font-weight:500}
+  .bar .track{height:8px;border-radius:99px;background:var(--panel-2);overflow:hidden;border:1px solid var(--line-soft)}
+  .bar .fill{display:block;height:100%;width:0;border-radius:99px;background:var(--grad);transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+
+  /* experience */
+  #experience{background:linear-gradient(180deg,var(--bg-2),var(--bg))}
+  .timeline{position:relative;margin-top:10px}
+  .timeline::before{content:"";position:absolute;left:19px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--accent),var(--accent-2),transparent)}
+  .tl-item{position:relative;padding:0 0 34px 58px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item .node{position:absolute;left:9px;top:3px;width:22px;height:22px;border-radius:50%;background:var(--bg);border:2px solid var(--accent);display:grid;place-items:center}
+  .tl-item .node::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--grad)}
+  .tl-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+  .tl-head h3{font-size:1.12rem}
+  .tl-head .co{color:var(--accent);font-weight:600}
+  .tl-head .when{margin-left:auto;font-size:.82rem;color:var(--muted-2);white-space:nowrap;border:1px solid var(--line-soft);padding:3px 10px;border-radius:99px}
+  .tl-item ul{list-style:none;margin-top:12px;display:grid;gap:8px}
+  .tl-item ul li{position:relative;padding-left:20px;color:var(--muted);font-size:.94rem}
+  .tl-item ul li::before{content:"";position:absolute;left:2px;top:9px;width:7px;height:7px;border-radius:2px;background:var(--accent);transform:rotate(45deg)}
+
+  /* projects */
+  .filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+  .filters button{
+    font:inherit;font-size:.86rem;font-weight:600;color:var(--muted);cursor:pointer;
+    padding:9px 16px;border-radius:99px;border:1px solid var(--line);background:transparent;transition:all .18s ease
+  }
+  .filters button:hover{color:var(--text)}
+  .filters button.active{color:#fff;background:var(--grad-btn);border-color:transparent}
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{
+    border:1px solid var(--line-soft);background:var(--panel);border-radius:var(--radius);overflow:hidden;
+    display:flex;flex-direction:column;cursor:pointer;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease
+  }
+  .card:hover{transform:translateY(-6px);border-color:var(--line);box-shadow:var(--shadow)}
+  .card .media{position:relative;aspect-ratio:16/10;overflow:hidden;background:linear-gradient(135deg,#101a30,#0c1428)}
+  .card .media img,.card .media svg{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+  .card .media .tag{position:absolute;top:10px;left:10px;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:7px;background:rgba(9,13,25,.72);backdrop-filter:blur(6px);border:1px solid var(--line);color:var(--accent-3)}
+  .card .body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .card .body h3{font-size:1.06rem}
+  .card .body p{color:var(--muted);font-size:.9rem;flex:1}
+  .card .stack{display:flex;flex-wrap:wrap;gap:6px}
+  .card .stack span{font-size:.72rem;color:var(--muted-2);border:1px solid var(--line-soft);padding:3px 8px;border-radius:6px}
+  .card .more{font-size:.82rem;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:6px}
+
+  /* modal */
+  dialog#pm{
+    position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
+    margin:0;padding:0;max-width:720px;width:calc(100% - 32px);
+    max-height:calc(100vh - 40px);overflow:auto;border-radius:18px;
+    background:var(--panel);color:var(--text);box-shadow:0 40px 90px -20px rgba(0,0,0,.8);
+    border:1px solid var(--line);
+  }
+  dialog#pm:not([open]){display:none}
+  dialog#pm::backdrop{background:rgba(6,9,18,.8);backdrop-filter:blur(4px)}
+  #pm .m-media{aspect-ratio:16/10;overflow:hidden;background:#0c1428;border-bottom:1px solid var(--line)}
+  #pm .m-media img{width:100%;height:100%;object-fit:contain;background:#0c1428}
+  #pm .m-media svg{width:100%;height:100%;object-fit:cover}
+  #pm .m-thumbs{display:flex;gap:8px;flex-wrap:wrap;padding:12px 16px 0}
+  #pm .m-thumbs button{width:88px;aspect-ratio:16/10;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:#0c1428;padding:0;cursor:pointer;opacity:.5;transition:opacity .15s ease,border-color .15s ease}
+  #pm .m-thumbs button:hover{opacity:.85}
+  #pm .m-thumbs button.active{opacity:1;border-color:var(--accent)}
+  #pm .m-thumbs img,#pm .m-thumbs svg{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+  #pm .m-note{margin-top:14px;font-size:.8rem;color:var(--muted-2);font-style:italic}
+  #pm .m-body{padding:22px 28px 30px}
+  #pm .m-tag{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-3)}
+  #pm h3{font-size:1.45rem;margin:8px 0 12px}
+  #pm p{color:var(--muted);font-size:.98rem}
+  #pm .stack{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+  #pm .stack span{font-size:.8rem;color:var(--muted);background:var(--panel-2);border:1px solid var(--line-soft);padding:5px 11px;border-radius:8px}
+  #pm .m-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+  #pm .m-close{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:rgba(9,13,25,.6);color:var(--text);display:grid;place-items:center;cursor:pointer}
+  #pm .m-close svg{width:16px;height:16px}
+
+  /* services */
+  #services{background:linear-gradient(180deg,var(--bg),var(--bg-2))}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .svc{border:1px solid var(--line-soft);background:var(--panel);border-radius:var(--radius);padding:26px;transition:transform .2s ease,border-color .2s ease}
+  .svc:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .svc .ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:var(--grad);color:#0a0f1c;margin-bottom:16px}
+  .svc .ic svg{width:22px;height:22px}
+  .svc h3{font-size:1.05rem;margin-bottom:8px}
+  .svc p{color:var(--muted);font-size:.92rem}
+
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px}
+  .contact-cards{display:grid;gap:14px}
+  .ct{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line-soft);background:var(--panel);border-radius:14px;padding:18px}
+  .ct .ic{width:42px;height:42px;flex:none;border-radius:11px;display:grid;place-items:center;background:rgba(56,189,248,.1);border:1px solid var(--line);color:var(--accent)}
+  .ct .ic svg{width:19px;height:19px}
+  .ct b{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-2)}
+  .ct span{display:block;color:var(--text);word-break:break-word}
+  form{border:1px solid var(--line-soft);background:var(--panel);border-radius:var(--radius);padding:26px;display:grid;gap:14px}
+  form .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{font-size:.82rem;color:var(--muted);font-weight:600}
+  input,textarea{
+    width:100%;font:inherit;color:var(--text);background:var(--bg-2);border:1px solid var(--line);
+    border-radius:10px;padding:12px 14px;margin-top:6px;transition:border-color .18s ease
+  }
+  input:focus,textarea:focus{outline:none;border-color:var(--accent)}
+  textarea{resize:vertical;min-height:120px}
+
+  /* footer */
+  footer{border-top:1px solid var(--line-soft);padding:34px 0;background:var(--bg-2)}
+  .foot{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+  .foot p{color:var(--muted-2);font-size:.88rem}
+  .foot .fs{display:flex;gap:10px}
+  .foot .fs a{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;display:grid;place-items:center;color:var(--muted);transition:all .18s ease}
+  .foot .fs a:hover{color:var(--text);border-color:var(--accent);transform:translateY(-3px)}
+  .foot .fs svg{width:17px;height:17px}
+  #totop{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--grad);color:#0a0f1c;opacity:0;pointer-events:none;transform:translateY(10px);transition:all .25s ease;z-index:50}
+  #totop.show{opacity:1;pointer-events:auto;transform:none}
+  #totop svg{width:18px;height:18px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .portrait-wrap{order:-1}
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:30px}
+    .skill-cards,.proj-grid,.svc-grid{grid-template-columns:repeat(2,1fr)}
+    .skill-card.featured{grid-column:span 2}
+    .bars{grid-template-columns:1fr}
+    .stats-row{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:680px){
+    section{padding:72px 0}
+    .nav-links{
+      position:fixed;inset:72px 0 auto 0;flex-direction:column;align-items:stretch;gap:0;
+      background:rgba(11,16,32,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
+      padding:10px 20px 18px;transform:translateY(-140%);transition:transform .32s ease;
+    }
+    .nav-links.open{transform:none}
+    .nav-links a{padding:14px 8px;border-radius:0;border-bottom:1px solid var(--line-soft)}
+    .nav-links .nav-cta{margin:12px 0 0}
+    .nav-toggle{display:block}
+    .skill-cards,.proj-grid,.svc-grid,.facts{grid-template-columns:1fr}
+    .skill-card.featured{grid-column:span 1}
+    .stats-row{grid-template-columns:1fr 1fr}
+    form .two{grid-template-columns:1fr}
+    .tl-head .when{margin-left:0}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.001ms!important;transition-duration:.001ms!important}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body id="top">
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.79 1.06.79 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05C20.5 8.65 22 10.6 22 14v7h-4v-6.2c0-1.48-.03-3.4-2.07-3.4-2.07 0-2.39 1.62-2.39 3.29V21H9V9Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 6.5h18v11H3zM3.5 7l8.5 6 8.5-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .5 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.5-1 1-1h3.5c.6 0 1 .5 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 19V6M6 12l6-6 6 6"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8l-5-5Z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M14 3v5h5M8 13h8M8 17h6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3 3 8l9 5 9-5-9-5ZM3 12l9 5 9-5M3 16l9 5 9-5"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M7 18a4 4 0 0 1-.5-7.97A6 6 0 0 1 18 8.5a3.5 3.5 0 0 1 0 7 3 3 0 0 1-.2 0"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 12v6M9.5 15.5 12 18l2.5-2.5"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="9.5" y="9.5" width="5" height="5" fill="currentColor"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M9 3h6M10 3v6L5 19a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 19l-5-10V3"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M7.5 15h9"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></symbol>
+  <symbol id="i-radio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M7.8 7.8a6 6 0 0 0 0 8.4M16.2 16.2a6 6 0 0 0 0-8.4M4.9 4.9a10 10 0 0 0 0 14.2M19.1 19.1a10 10 0 0 0 0-14.2"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="18" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M7 7.5h.01M7 16.5h.01"/></symbol>
+</svg>
+
+<header id="site-header">
+  <div class="wrap nav">
+    <a href="#top" class="brand">
+      <span class="mono">MS</span>
+      <span>Muhammad Sajjad<small>Senior Software Engineer</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="nav-cta"><a class="btn btn-primary" href="https://drive.google.com/file/d/13fcstIs93jBrXRGqI-nP-DQL_E5U6mZx/view?usp=sharing" target="_blank" rel="noopener"><svg><use href="#i-doc"/></svg>View CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Lahore, Pakistan · Open to work</span>
+      <h1>Hi, I'm Muhammad Sajjad</h1>
+      <p class="hero-role"><b>Senior Software Engineer</b> — scalable backends, real-time platforms &amp; <b>IoT-integrated</b> applications</p>
+      <p class="hero-desc">6+ years architecting production systems across fintech, logistics, SaaS and e-learning. Deep in <b style="color:var(--text)">Node.js, NestJS, React, Next.js, Vue</b> and <b style="color:var(--text)">Laravel</b>, with strong PostgreSQL / MongoDB / Redis data work and AWS &amp; Azure delivery — accelerated with AI tooling (Claude, Copilot, Cursor) without cutting corners on quality.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://drive.google.com/file/d/13fcstIs93jBrXRGqI-nP-DQL_E5U6mZx/view?usp=sharing" target="_blank" rel="noopener"><svg><use href="#i-doc"/></svg>View CV</a>
+        <a class="btn btn-ghost" href="#projects"><svg><use href="#i-grid"/></svg>See Projects</a>
+        <a class="btn btn-ghost" href="#contact"><svg><use href="#i-mail"/></svg>Hire Me</a>
       </div>
-      <!-- /row -->
-    </header>
-    <!-- /header -->
-
-    <!-- intro section
-   ================================================== -->
-    <section id="intro">
-      <div class="intro-overlay"></div>
-
-      <div class="intro-content">
-        <div class="row">
-          <div class="col-twelve">
-            <h5>Hello,</h5>
-            <h1>I'm Muhammad Sajjad </h1>
-            <br />
-            <p class="intro-position">
-              <span>MERN STACK</span>
-              <span>MEVN STACK</span>
-              <span>JS + TS</span>
-              <span>Node.Js + Nest.Js + Express.Js + Serverless (Node)</span>
-              <span>React.JS + Next.JS + Vue.JS + Nuxt.JS</span>
-              <span>MongoDB + Sequelize</span>
-              <span>Git + Jira + AWS (S3) + Azure + Heroku</span>
-            </p>
-
-            <a class="button stroke smoothscroll" href="#about" title=""
-              >More About Me</a
-            >
-          </div>
-        </div>
+      <div class="hero-social">
+        <a href="https://github.com/muhammadsajjad5240" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
+        <a href="https://www.linkedin.com/in/muhammad-sajjad-4b8712175/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
+        <a href="mailto:sajjadkhan42601@gmail.com" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
       </div>
-      <!-- /intro-content -->
-
-      <ul class="intro-social">
-        <li>
-          <a href="https://web.facebook.com/profile.php?id=100006126345550" target="_blank"><i class="fa fa-facebook"></i></a>
-        </li>
-        <li>
-          <a href="https://github.com/muhammadsajjad5240" target="_blank"><i class="fa fa-github"></i></a>
-        </li>
-        
-        <li>
-          <a href="https://www.linkedin.com/in/muhammad-sajjad-4b8712175/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        </li>
-        
-      </ul>
-      <!-- /intro-social -->
-    </section>
-    <!-- /intro -->
-
-    <!-- about section
-   ================================================== -->
-    <section id="about">
-      <div class="row section-intro">
-        <div class="col-twelve">
-          <h5>About</h5>
-          <h1>Let me introduce myself.</h1>
-
-          <div class="intro-info">
-            <img src="images/sajjad.png" alt="Sajjad Profile Picture" />
-
-            <p class="lead">
-              Full-Stack Software Engineer | JavaScript, TypeScript, ReactJS, VueJS, NodeJS, NestJS, NuxtJs, NextJs | MERN & MEVN Stack | MongoDB, Tailwind, Bootstrap | Jest, Cypress | Git, Jira | Building Scalable Web Apps          </div>
-        </div>
-      </div>
-      <!-- /section-intro -->
-
-      <div class="row about-content">
-        <div class="col-six tab-full">
-          <h3>Profile</h3>
-          <p>
-            I've around +5 years of experience in web-based technologies. I’ve working experience
-            in agile/scrum environments. I am always thirsty to dive into new technologies, currently
-            working as a Software Engineer (HTML/CSS/JS) in Different technologies like React,
-            Vue.js, Nuxt.js, Node.js, MongoDB, etc. I'm determined to learn & work on new
-            technologies. A good team player with excellent interpersonal/communication skills.</p>
-
-          <ul class="info-list">
-            <li>
-              <strong>Fullname:</strong>
-              <span>Muhammad sajjad</span>
-            </li>
-            <li>
-              <strong>Birth Date:</strong>
-              <span>August 09, 1997</span>
-            </li>
-            <li>
-              <strong>Job:</strong>
-              <span>React.js | Vue.js Node.js | Nest.js | Next.js | Nuxt.js</span>
-            </li>
-            <li>
-              <strong>Email:</strong>
-              <span>sajjadkhan42601@gmail.com</span>
-            </li>
-          </ul>
-          <!-- /info-list -->
-        </div>
-
-        <div class="col-six tab-full">
-          <h3>Skills</h3>
-          <p>My Experties are given below...</p>
-
-          <ul class="skill-bars">
-            <li>
-              <div class="progress percent100"><span>100%</span></div>
-              <strong>HTML</strong>
-            </li>
-            <li>
-              <div class="progress percent100"><span>100%</span></div>
-              <strong>CSS</strong>
-            </li>
-            <li>
-              <div class="progress percent95"><span>95%</span></div>
-              <strong>JavaScript + Typescript</strong>
-            </li>
-            <li>
-              <div class="progress percent95"><span>95%</span></div>
-              <strong>React</strong>
-            </li>
-            <li>
-              <div class="progress percent100"><span>100%</span></div>
-              <strong>VUE.JS</strong>
-            </li>
-            <li>
-              <div class="progress percent100"><span>100%</span></div>
-              <strong>NUXT.JS</strong>
-            </li>
-            <li>
-              <div class="progress percent90"><span>80%</span></div>
-              <strong>NEXT.JS</strong>
-            </li>
-            <li>
-              <div class="progress percent90"><span>90%</span></div>
-              <strong>Node.JS</strong>
-            </li>
-            <li>
-              <div class="progress percent90"><span>90%</span></div>
-              <strong>Nest.JS</strong>
-            </li>
-          </ul>
-          <!-- /skill-bars -->
-        </div>
-      </div>
-
-      <div class="row button-section">
-        <div class="col-twelve">
-          <a href="#contact" title="Hire Me" class="button stroke smoothscroll"
-            >Hire Me</a
-          >
-          <a href="https://drive.google.com/file/d/1LZ3tIflR_15RJ3dXN4K_XaMVAHntlDRO/view?usp=sharing" title="Download CV" class="button button-primary" target="_blank"
-            >Download CV</a
-          >
-        </div>
-      </div>
-    </section>
-    <!-- /process-->
-
-    <!-- resume Section
-   ================================================== -->
-    <section id="resume" class="grey-section">
-      <div class="row section-intro">
-        <div class="col-twelve">
-          <h5>Resume</h5>
-          <h1>More of my credentials.</h1>
-
-          <p class="lead">
-            I am a dedicated and results-oriented Full-Stack Web Developer with over 5 years of experience in crafting innovative and user-centric web applications. I thrive in agile/scrum environments and am passionate about staying up-to-date with the latest web technologies.
-          </p>
-        </div>
-      </div>
-      <!-- /section-intro-->
-
-      <div class="row resume-timeline">
-        <div class="col-twelve resume-header">
-          <h2>Work Experience</h2>
-        </div>
-        <!-- /resume-header -->
-
-        <div class="col-twelve">
-          <div class="timeline-wrap">
-             <!-- /timeline-block -->
-
-             <div class="timeline-block">
-              <div class="timeline-ico">
-                <i class="fa fa-graduation-cap"></i>
-              </div>
-
-              <div class="timeline-header">
-                <h3>Software Engineer</h3>
-                <p>Sep 2022 - Present</p>
-              </div>
-
-              <div class="timeline-content">
-                <h4>TechRydes</h4>
-                <p>
-                  Working as a senior software engineer in techrydes.
-                  Currently, I am working as a software engineer in MERN and MEVN stack. Complete different kind of projects just like LMS, Telecommunication etc.
-                </p>
-              </div>
-            </div>
-            <!-- /timeline-block -->
-
-            <div class="timeline-block">
-              <div class="timeline-ico">
-                <i class="fa fa-graduation-cap"></i>
-              </div>
-
-              <div class="timeline-header">
-                <h3>Full Stack Developer</h3>
-                <p>Jul 2020 - Sep 2022</p>
-              </div>
-
-              <div class="timeline-content">
-                <h4>Genius Mind Zone</h4>
-                <p>
-                  Worked as a senior full-stack developer in MERN stack and MEVN stack. Complete more than 7 projects on these stacks. Also work on 
-                  enterprise level software such as Alaska ERP, Flight Search Engine, Real Estate, LMS etc.
-                </p>
-              </div>
-            </div>
-            <div class="timeline-block">
-              <div class="timeline-ico">
-                <i class="fa fa-graduation-cap"></i>
-              </div>
-
-              <div class="timeline-header">
-                <h3>Web Developer</h3>
-                <p>Fab 2020 - Apr-2020</p>
-              </div>
-
-              <div class="timeline-content">
-                <h4>Ranksol</h4>
-                <p>
-                  Worked as MERN Stack developer. Worked as a full stack developer on online doctor appointment software.
-                </p>
-              </div>
-            </div>
-            <!-- /timeline-block -->
-
-            <div class="timeline-block">
-              <div class="timeline-ico">
-                <i class="fa fa-graduation-cap"></i>
-              </div>
-
-              <div class="timeline-header">
-                <h3>MERN Stack Developer</h3>
-                <p>Oct 2019 - Jan 2020</p>
-              </div>
-
-              <div class="timeline-content">
-                <h4>WAMPDO</h4>
-                <p>
-                  Worked as web developer. Work on payroll management system as a MERN Stack developer. Payroll management system mange all the activities of IT company such as employess registration, salary slips, expense and project management etc.
-                </p>
-              </div>
-            </div>
-            <div class="timeline-block">
-              <div class="timeline-ico">
-                <i class="fa fa-graduation-cap"></i>
-              </div>
-
-              <div class="timeline-header">
-                <h3>MERN Stack Developer</h3>
-                <p>May 2019 - Aug 2020</p>
-              </div>
-
-              <div class="timeline-content">
-                <h4>Charlie Developer</h4>
-                <p>
-                  Worked as MERN Stack developer. Work on Utility mechanic as a MERN Stack developer. On this platform people register themself and book different types of workers such as electrician, plumber, painter etc. These employees serve employess and receive payment, customers can also make claims against employess.
-                </p>
-              </div>
-            </div>
-            <!-- /timeline-block -->
-          </div>
-          <!-- /timeline-wrap -->
-        </div>
-        <!-- /col-twelve -->
-      </div>
-      <!-- /resume-timeline -->
-
-      <div class="row resume-timeline">
-        <div class="col-twelve resume-header">
-          <h2>Education</h2>
-        </div>
-        <!-- /resume-header -->
-
-        
-            <!-- /timeline-block -->
-
-            <div class="timeline-block">
-              <div class="timeline-ico">
-                <i class="fa fa-briefcase"></i>
-              </div>
-
-              <div class="timeline-header">
-                <h3>Bachelor Degree</h3>
-                <p>oct 2015 - Aug 2019</p>
-              </div>
-
-              <div class="timeline-content">
-                <h4>BS in computer science</h4>
-                <p>Govt College University Faisalabad</p>
-              </div>
-            </div>
-            <!-- /timeline-block -->
-
-           
-            <!-- /timeline-block -->
-          </div>
-          <!-- /timeline-wrap -->
-        </div>
-        <!-- /col-twelve -->
-      </div>
-      <!-- /resume-timeline -->
-    </section>
-    <!-- /features -->
-
-    <!-- Portfolio Section
-   ================================================== -->
-    <section id="portfolio">
-      <div class="row section-intro">
-        <div class="col-twelve">
-          <h5>Portfolio</h5>
-          <h1>Check Out Some of My Works.</h1>
-
-          <p class="lead">
-            Here are the details of some projects which i done 
-          </p>
-        </div>
-      </div>
-      <!-- /section-intro-->
-
-      <div class="row portfolio-content">
-        <div class="col-twelve">
-          <!-- portfolio-wrapper -->
-          <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
-            <div class="bgrid folio-item">
-              <div class="item-wrap">
-                <img src="images/AERP.png" alt="AERP" style="height:248px;width:547px"/>
-                <a href="#modal-01" class="overlay">
-                  <div class="folio-item-table">
-                    <div class="folio-item-cell">
-                      <h3 class="folio-title">ALASKA ENTERPISE</h3>
-                      <span class="folio-types"> Desktop application for pharmacies. Pharma employess can perform all the activities just like sale order, purchase order, GRN, Tax implementation, Discount, Audit etc </span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- /folio-item -->
-
-            <div class="bgrid folio-item">
-              <div class="item-wrap">
-                <img src="images/triplet.JPG" alt="Triplets Travel" style="height:248px;width:547px" />
-                <a href="#modal-02" class="overlay">
-                  <div class="folio-item-table">
-                    <div class="folio-item-cell">
-                      <h3 class="folio-title">FLIGHT SEARCH ENGINE</h3>
-                      <span class="folio-types"> Online web application for online flight booking overall the world. All the process is online including payment. Also provide different types of packages for tourist across the world. </span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- /folio-item -->
-
-            <div class="bgrid folio-item" style="margin-top: 10px;">
-              <div class="item-wrap mt-5">
-                <img src="images/mainRX.png" alt="themainrx" style="height:248px;width:547px"/>
-                <a href="#modal-03" class="overlay">
-                  <div class="folio-item-table">
-                    <div class="folio-item-cell">
-                      <h3 class="folio-title">Online MEDICAL STORE</h3>
-                      <span class="folio-types"> Online medical store for US citizens where people order their medicine and make payment by hand. Here we also provide discounts on different occasions. </span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- /folio-item -->
-
-            <div class="bgrid folio-item" style="margin-top: 10px;">
-              <div class="item-wrap">
-                <img src="images/lovelyfare.JPG" alt="Lovely Fares" style="height:248px;width:547px"/>
-                <a href="#modal-04" class="overlay">
-                  <div class="folio-item-table">
-                    <div class="folio-item-cell">
-                      <h3 class="folio-title">LOVELY FAIR</h3>
-                      <span class="folio-types"> Online web application for online flight booking overall the world. All the process is online including payment. </span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- /folio-item -->
-
-            <div class="bgrid folio-item" style="margin-top: 10px;">
-              <div class="item-wrap">
-                <img src="images/dugsi_.JPG" alt="Dugsi" style="height:248px;width:547px"/>
-                <a href="#modal-05" class="overlay">
-                  <div class="folio-item-table">
-                    <div class="folio-item-cell">
-                      <h3 class="folio-title">DUGSI</h3>
-                      <span class="folio-types"> Children's online platform for learning Quran . Provide basic to advance lessons with different quizzes, assignments. We also provide different prizzes on assignement and quizzes basis. All the platform is managed with three dashboards Admin, Teacher and Student.  </span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- /folio-item -->
-            <div class="bgrid folio-item" style="margin-top: 10px;">
-              <div class="item-wrap">
-                <img src="images/utilityMechanic.png" alt="Utility Mechanic" style="height:248px;width:547px"/>
-                <a href="#modal-06" class="overlay">
-                  <div class="folio-item-table">
-                    <div class="folio-item-cell">
-                      <h3 class="folio-title">UTILITY MACHINE</h3>
-                      <span class="folio-types"> Online platform for differnet kinds of home and office service such as electrician, plumber, patiner, carpainter etc. After registration people booked employees and get their service, they can also make complains against employees. </span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-             <!-- /folio-item -->
-             <div class="bgrid folio-item" style="margin-top: 10px;">
-              <div class="item-wrap">
-                <img src="images/predatorPlay.png" alt="Predator Play" style="height:248px;width:547px"/>
-                <a href="#" class="overlay">
-                  <div class="folio-item-table">
-                    <div class="folio-item-cell">
-                      <h3 class="folio-title">ONLINE GAME TOURNAMENT</h3>
-                      <span class="folio-types"> Platform for game scoring online. </span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- /folio-item -->
-
-            <!-- modal popups - begin
-	            ============================================================= -->
-            <div id="modal-01" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/AERPModal.png" alt="Alaska ERP " />
-              </div>
-
-              <div class="description-box">
-                <h4>ALASKA ENTERPRISE</h4>
-                <p style="text-align: justify;">
-                  The Ultimate Pharmacy Solution (Alaska ERP) The Essential Pharma solutions all embodied within a Single Page Application (SPA) developed with the cutting edges of technology, Alaska ERP Pharma offers you flexible workability both Online & Offline, maneuverable to your cause. Our product is equipped with tools & a database that simplify, secure, optimize & automate the business activity of any business, whether single shop medical store or a multi-chain pharmacy brand. By doing so businesses can efficiently track & manage all resources with ease, helping them cross any hurdle that stunts their growth, thereby expanding exponentially
-                </p>
-
-                <div class="categories">Web Development</div>
-              </div>
-
-              <div class="link-box">
-                <a href="https://www.alaskaerp.com/" target="_blank">Details</a>
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-01 -->
-
-            <div id="modal-02" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/tripletModal.png" alt="Triplet Trave Features" />
-              </div>
-
-              <div class="description-box">
-                <h4>TRIPPLET</h4>
-                <p style="text-align: justify;">
-                  We can talk on the phone or meet face-to-face. You can also book straightaway on our website and still obtain the benefits of your own travel consultant.
-
-                  Think of us as a personal caretaker, here to put your needs first and answer any questions. With our services, you’ll feel assured that your vacation will be organized, hassle-free and flooding with moments to last a lifetime. And it won’t cost you much to work with us, unlike some third-party websites who sneak in concealed fees.
-                  
-                  Checkout all these benefits when you book your next Business or Personal vacation with Triplets Travel & Vacations.                </p>
-
-                <div class="categories">Web Design</div>
-              </div>
-
-              <div class="link-box">
-                <a href="https://www.tripletstravel.com/" target="_blank">Details</a>
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-02 -->
-
-            <div id="modal-03" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/mainRxModal.png" alt="The MainRX Store" />
-              </div>
-
-              <div class="description-box">
-                <h4>The MainxRx</h4>
-                <p>
-                  MainRx is an online pharmacy where users can buy easily medicine and upload prescriptions so pharmacists will be added medicine formulas against its prescription.
-                  Your medication, delivered Same-day delivery, scheduled shipping, and scheduled pick-ups available.
-                </p>
-
-                <div class="categories">Web Design</div>
-              </div>
-
-              <div class="link-box">
-                <a href="http://themainrx.com" target="_blank">Details</a>
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-03 -->
-
-            <div id="modal-04" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/lovelyFareModal.png" alt="Lovely Fares Travel" />
-              </div>
-
-              <div class="description-box">
-                <h4>LOVELY FAIR</h4>
-                <p>
-                  LovelyFares.ca is a venture of Lovely Travel and Tours International Inc.,a fast growing travel company of Canada. Established in May 1995, we have made our name well known in the travel industry. We have our presence in well known locations in Greater Toronto area . We are based at Brampton , Ontario and are TICO and IATA accredited. We have well experienced and talented staff with latest technology to serve the customers efficiently .We are specialized in tours ,customized packages ,air tickets and hotels. Our website has access to millions of fares for all the airlines* throughout the world including complex itineraries. We are fully committed to provide excellent business services to the community.                </p>
-
-                <div class="categories">Branding</div>
-              </div>
-
-              <div class="link-box">
-                <a href="https://lovelyfares.ca/" target="_blank">Details</a>
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-04 -->
-
-            <div id="modal-05" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/dugsiModal.png" alt="Dusgi LMs" />
-              </div>
-
-              <div class="description-box">
-                <h4>Online education course</h4>
-                <p>
-                  Dugsi is a modern way of teaching the Quran academy online. Anyone belonging to any country such as America, Canada or any other country, can contact us and effortlessly take advantage of the opportunity to study the Quran and teach online. Distance, age, gender, and country are not matter to studying the Quran online. Either you live in the United States or the United Kingdom, the language is not an obstacle for you. We have online Quran teachers who speak different languages. They can speak English and Arabic. We provide you with all these services at a minimal and affordable cost with Learn Online Quran Dugsi.                </p>
-                <div class="categories">Web Development</div>
-              </div>
-
-              <div class="link-box">
-                <a href="https://dugsi.us/" target="_blank">Details</a>
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-05 -->
-            <div id="modal-06" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/utilityMechanic.png" alt="Online Home Base Services" />
-              </div>
-            
-              <div class="description-box">
-                <h4>Platform to book mechanics for home base services</h4>
-                <p>
-                  Online platform for differnet kinds of home and office service such as electrician, plumber, patiner, carpainter etc. After registration people booked employees and get their service, they can also make complains against employees.
-                </p>
-            
-                <div class="categories">Web Development</div>
-              </div>
-            
-              <div class="link-box">
-                <a href="http://utilitymechanic.herokuapp.com/" target="_blank">Details</a>
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- modal popups - end
-	            ============================================================= -->
-          </div>
-          <!-- /portfolio-wrapper -->
-        </div>
-        <!-- /twelve -->
-      </div>
-      <!-- /portfolio-content -->
-    </section>
-    <!-- /portfolio -->
-
-    <!-- CTA Section
-   ================================================== -->
-   
-    <!-- /cta -->
-
-    <!-- services Section
-   ================================================== -->
-    <!-- stats Section
-   ================================================== -->
-    <section id="stats" class="count-up">
-      <div class="row">
-        <div class="col-twelve">
-          <div
-            class="block-1-6 block-s-1-3 block-tab-1-2 block-mob-full stats-list"
-          >
-            <div class="bgrid stat">
-              <div class="icon-part">
-                <i class="icon-pencil-ruler"></i>
-              </div>
-
-              <h3 class="stat-count">15+</h3>
-
-              <h5 class="stat-title">Projects Completed</h5>
-            </div>
-            <!-- /stat -->
-
-            <div class="bgrid stat">
-              <div class="icon-part">
-                <i class="icon-users"></i>
-              </div>
-
-              <h3 class="stat-count">10+</h3>
-
-              <h5 class="stat-title">Happy Clients</h5>
-            </div>
-            <!-- /stat -->
-
-            <div class="bgrid stat">
-              <div class="icon-part">
-                <i class="icon-light-bulb"></i>
-              </div>
-
-              <h3 class="stat-count">5</h3>
-
-              <h5 class="stat-title">Crazy Ideas</h5>
-            </div>
-            <!-- /stat -->
-
-            <!-- /stat -->
-
-            <div class="bgrid stat">
-              <div class="icon-part">
-                <i class="icon-clock"></i>
-              </div>
-
-              <h3 class="stat-count">7200+</h3>
-
-              <h5 class="stat-title">Hours</h5>
-            </div>
-            <!-- /stat -->
-          </div>
-          <!-- /stats-list -->
-        </div>
-        <!-- /twelve -->
-      </div>
-      <!-- /row -->
-    </section>
-    <!-- /stats -->
-
-    <!-- contact
-   ================================================== -->
-    <section id="contact">
-      <div class="row section-intro">
-        <div class="col-twelve">
-          <h5>Contact</h5>
-          <h1>I'd Love To Hear From You.</h1>
-        </div>
-      </div>
-      <!-- /section-intro -->
-
-      <div class="row contact-form">
-        <div class="col-twelve">
-          <!-- Form End -->
-
-          <!-- contact-warning -->
-          <div id="message-warning"></div>
-          <!-- contact-success -->
-          <div id="message-success">
-            <i class="fa fa-check"></i>Your message was sent, thank you!<br />
-          </div>
-        </div>
-        <!-- /col-twelve -->
-      </div>
-      <!-- /contact-form -->
-
-      <div class="row contact-info">
-        <div class="col-four tab-full">
-          <div class="icon">
-            <i class="icon-pin"></i>
-          </div>
-
-          <h5>Where to find me</h5>
-
-          <p>
-            Johar town H2-block <br />
-            492 House Number<br />
-    
-          </p>
-        </div>
-
-        <div class="col-four tab-full collapse">
-          <div class="icon">
-            <i class="icon-mail"></i>
-          </div>
-
-          <h5>Email Me At</h5>
-
-          <p>
-            sajjadkhan42601@gmail.com<br />
-          </p>
-        </div>
-
-        <div class="col-four tab-full">
-          <div class="icon">
-            <i class="icon-phone"></i>
-          </div>
-
-          <h5>Call Me At</h5>
-
-          <p>
-            Phone: 0311-0749045<br />
-            
-          </p>
-        </div>
-      </div>
-      <!-- /contact-info -->
-    </section>
-    <!-- /contact -->
-
-    <!-- footer
-   ================================================== -->
-
-    <footer>
-      <div class="row">
-        <div class="col-six tab-full pull-right social">
-          <ul class="footer-social">
-            <li>
-              <a href="https://web.facebook.com/profile.php?id=100006126345550" target="_blank"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href="https://github.com/muhammadsajjad5240" target="_blank"><i class="fa fa-github"></i></a>
-            </li>
-          
-            <li>
-              <a href="https://www.linkedin.com/in/muhammad-sajjad-4b8712175/" target="_blank"><i class="fa fa-linkedin"></i></a>
-            </li>
-            
-          </ul>
-        </div>
-
-        <div class="col-eight tab-full">
-          <div class="copyright">
-            <span>© Copyright 2023 </span>
-          
-          </div>
-        </div>
-
-        <div id="go-top">
-          <a class="smoothscroll" title="Back to Top" href="#top"
-            ><i class="fa fa-long-arrow-up"></i
-          ></a>
-        </div>
-      </div>
-      <!-- /row -->
-    </footer>
-
-    <div id="preloader">
-      <div id="loader"></div>
     </div>
+    <div class="portrait-wrap reveal">
+      <div class="portrait-ring"></div>
+      <div class="portrait">
+        <img src="img/profile.webp" width="520" height="520" alt="Portrait of Muhammad Sajjad" fetchpriority="high" />
+        <div class="portrait-badge">
+          <span><span class="dot"></span><b>Open</b> to roles &amp; freelance</span>
+          <b>6+ yrs</b>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Java Script
-   ================================================== -->
-    <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+  <div class="wrap">
+    <div class="stats-row reveal">
+      <div class="stat"><b data-count="6">0</b><span>Years of experience</span></div>
+      <div class="stat"><b data-count="20" data-suffix="+">0</b><span>Projects delivered</span></div>
+      <div class="stat"><b data-count="7" data-suffix=" domains">0</b><span>Industries shipped in</span></div>
+      <div class="stat"><b data-count="95" data-suffix="%+">0</b><span>Test coverage upheld</span></div>
+    </div>
+    <div class="marquee reveal" aria-hidden="true">
+      <ul>
+        <li>Node.js</li><li>NestJS</li><li>Express.js</li><li>TypeScript</li><li>React.js</li><li>Next.js</li><li>Vue.js</li><li>Nuxt.js</li><li>Laravel</li><li>PostgreSQL</li><li>MongoDB</li><li>Redis</li><li>GraphQL</li><li>Socket.IO</li><li>IoT Integration</li><li>Microservices</li><li>Docker</li><li>AWS</li><li>Azure</li><li>CI/CD</li>
+        <li>Node.js</li><li>NestJS</li><li>Express.js</li><li>TypeScript</li><li>React.js</li><li>Next.js</li><li>Vue.js</li><li>Nuxt.js</li><li>Laravel</li><li>PostgreSQL</li><li>MongoDB</li><li>Redis</li><li>GraphQL</li><li>Socket.IO</li><li>IoT Integration</li><li>Microservices</li><li>Docker</li><li>AWS</li><li>Azure</li><li>CI/CD</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">About</span>
+      <h2 class="h-title">Engineer who ships <span class="grad-text">production systems</span>, not demos</h2>
+      <p class="lead">I design and build the backbone of real products — data models, APIs, real-time pipelines and the cloud they run on — then wire clean front ends on top.</p>
+    </div>
+    <div class="about-grid reveal">
+      <div>
+        <p>I'm a Senior Software Engineer with <b style="color:var(--text)">6+ years</b> of experience architecting scalable backend systems, real-time platforms and IoT-integrated applications. I've delivered across fintech, logistics, SaaS and e-learning — from an offline-first pharmacy ERP to a real-time truck-tracking platform ingesting telemetry from GPS trackers, dashcams and ELDs.</p>
+        <p>My core stack is <b style="color:var(--text)">Node.js, NestJS and Express</b> on the backend, <b style="color:var(--text)">React, Next.js, Vue and Nuxt</b> on the front end, and <b style="color:var(--text)">Laravel</b> where a PHP codebase fits best — backed by MongoDB, PostgreSQL and Redis, deployed with Docker and CI/CD on AWS and Azure.</p>
+        <p>I use AI tooling — Claude, ChatGPT, GitHub Copilot and Cursor — to move faster while keeping code clean, reviewed and production-grade.</p>
+        <ul class="facts">
+          <li><b>Name</b>Muhammad Sajjad</li>
+          <li><b>Location</b>Lahore, Pakistan</li>
+          <li><b>Email</b>sajjadkhan42601@gmail.com</li>
+          <li><b>Phone</b>+92 311 0749045</li>
+          <li><b>Experience</b>6+ years</li>
+          <li><b>Education</b>BS Computer Science, GCU Faisalabad</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:1rem;margin-bottom:14px">Domains I've shipped in</h3>
+        <div class="domains">
+          <span><i>◆</i>FinTech &amp; Payments</span>
+          <span><i>◆</i>Logistics &amp; Fleet / IoT</span>
+          <span><i>◆</i>SaaS Platforms</span>
+          <span><i>◆</i>E-Learning</span>
+          <span><i>◆</i>E-Commerce &amp; Pharmacy</span>
+          <span><i>◆</i>Real Estate</span>
+          <span><i>◆</i>Travel &amp; Booking</span>
+        </div>
+        <h3 style="font-size:1rem;margin:26px 0 14px">What I bring</h3>
+        <ul class="facts" style="grid-template-columns:1fr">
+          <li><b>Architecture</b>Microservices, event-driven &amp; real-time systems designed to scale to millions of events.</li>
+          <li><b>Ownership</b>From schema and API design through Docker, CI/CD and cloud deployment.</li>
+          <li><b>Quality</b>Typed code, Jest &amp; Cypress coverage, code review and agile delivery.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Skills</span>
+      <h2 class="h-title">A full-stack toolkit, <span class="grad-text">end to end</span></h2>
+      <p class="lead">Everything from device integration and data modelling to the pixels users touch.</p>
+    </div>
+    <div class="skill-cards">
+      <div class="skill-card reveal">
+        <div class="ic"><svg><use href="#i-code"/></svg></div>
+        <h3>Languages &amp; Frameworks</h3>
+        <div class="chips">
+          <span>JavaScript / TypeScript</span><span>Node.js</span><span>NestJS</span><span>Express.js</span><span>React.js</span><span>Next.js</span><span>Vue.js</span><span>Nuxt.js</span><span>Laravel (PHP)</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="ic"><svg><use href="#i-layers"/></svg></div>
+        <h3>Frontend &amp; State</h3>
+        <div class="chips">
+          <span>HTML5</span><span>CSS3</span><span>Tailwind CSS</span><span>Bootstrap</span><span>Material UI</span><span>Redux</span><span>Vuex</span><span>Pinia</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="ic"><svg><use href="#i-db"/></svg></div>
+        <h3>Databases &amp; Caching</h3>
+        <div class="chips">
+          <span>MongoDB</span><span>PostgreSQL</span><span>MySQL</span><span>SQL</span><span>Redis</span><span>Sequelize</span><span>Supabase</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="ic"><svg><use href="#i-radio"/></svg></div>
+        <h3>Architecture &amp; Real-Time</h3>
+        <div class="chips">
+          <span>Microservices</span><span>RESTful APIs</span><span>GraphQL</span><span>IoT Device Integration</span><span>Socket.IO / WebSockets</span><span>Event-Driven Systems</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="ic"><svg><use href="#i-cloud"/></svg></div>
+        <h3>Cloud &amp; DevOps</h3>
+        <div class="chips">
+          <span>AWS</span><span>Microsoft Azure</span><span>Docker</span><span>CI/CD Pipelines</span><span>Heroku</span><span>Vercel</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="ic"><svg><use href="#i-cpu"/></svg></div>
+        <h3>AI-Assisted Engineering</h3>
+        <div class="chips">
+          <span>Claude AI</span><span>OpenAI / ChatGPT</span><span>GitHub Copilot</span><span>Cursor</span><span>LLM API Integration</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="ic"><svg><use href="#i-flask"/></svg></div>
+        <h3>Testing &amp; Tooling</h3>
+        <div class="chips">
+          <span>Jest</span><span>Cypress</span><span>Git / GitHub</span><span>Bitbucket</span><span>Jira</span><span>Agile / Scrum</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="ic"><svg><use href="#i-radio"/></svg></div>
+        <h3>IoT &amp; Hardware</h3>
+        <div class="chips">
+          <span>GPS Trackers</span><span>Dashcams</span><span>ELD Devices</span><span>Fleet Telematics</span><span>Telemetry Ingestion</span><span>MQTT / WebSockets</span>
+        </div>
+      </div>
+
+      <div class="skill-card featured reveal">
+        <h3 style="margin-bottom:18px">Core proficiency</h3>
+        <div class="bars">
+          <div class="bar"><b>Node.js / NestJS / Express <span>95%</span></b><div class="track"><i class="fill" data-w="95"></i></div></div>
+          <div class="bar"><b>React.js / Next.js <span>92%</span></b><div class="track"><i class="fill" data-w="92"></i></div></div>
+          <div class="bar"><b>Vue.js / Nuxt.js <span>92%</span></b><div class="track"><i class="fill" data-w="92"></i></div></div>
+          <div class="bar"><b>TypeScript <span>90%</span></b><div class="track"><i class="fill" data-w="90"></i></div></div>
+          <div class="bar"><b>PostgreSQL / MongoDB / Redis <span>90%</span></b><div class="track"><i class="fill" data-w="90"></i></div></div>
+          <div class="bar"><b>Real-Time &amp; IoT Systems <span>85%</span></b><div class="track"><i class="fill" data-w="85"></i></div></div>
+          <div class="bar"><b>AWS / Azure / Docker / CI-CD <span>85%</span></b><div class="track"><i class="fill" data-w="85"></i></div></div>
+          <div class="bar"><b>Laravel (PHP) <span>80%</span></b><div class="track"><i class="fill" data-w="80"></i></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Experience</span>
+      <h2 class="h-title">6+ years, <span class="grad-text">five teams</span>, dozens of shipped features</h2>
+      <p class="lead">Progression from front-end work to owning backend architecture for mission-critical platforms.</p>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-item">
+        <span class="node"></span>
+        <div class="tl-head"><h3>Senior Software Engineer</h3><span class="co">· TEKHQS</span><span class="when">Feb 2026 – Present</span></div>
+        <ul>
+          <li>Architecting backend services for a Truck Management System (TMS) in NestJS, powering real-time fleet tracking for mission-critical logistics.</li>
+          <li>Building integrations with fleet telematics and IoT hardware — GPS trackers, dashcams, ELDs — for live vehicle tracking and telemetry ingestion.</li>
+          <li>Designing a scalable data layer across PostgreSQL, MongoDB Atlas and Redis for millions of tracking events with low-latency access.</li>
+          <li>Shipping secure REST APIs and microservices, containerised with Docker across AWS and Azure.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <span class="node"></span>
+        <div class="tl-head"><h3>Software Engineer</h3><span class="co">· Torque360</span><span class="when">Feb 2025 – Jan 2026</span></div>
+        <ul>
+          <li>Built scalable web apps in React.js and Next.js with RESTful APIs on Node.js, Express, NestJS, PostgreSQL and MongoDB.</li>
+          <li>Integrated PostgreSQL, Redis and Sequelize for efficient data access and caching strategies.</li>
+          <li>Containerised apps with Docker and deployed on AWS and Azure.</li>
+          <li>Built a video marketplace enabling secure video sales and streaming with Mux, AWS S3 and Stripe.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <span class="node"></span>
+        <div class="tl-head"><h3>Software Engineer</h3><span class="co">· TechRydes</span><span class="when">Sep 2022 – Dec 2024</span></div>
+        <ul>
+          <li>Built a freelancer marketplace (MERN) connecting freelancers with clients, similar to Upwork.</li>
+          <li>Developed Yureka, a B2B SaaS video-advertising platform with campaign management, audience targeting and hourly billing automation.</li>
+          <li>Integrated Zoom into TeenyCoder, a Vue.js / Nuxt.js e-learning platform, with the Easypaisa payment gateway.</li>
+          <li>Delivered RESTful APIs (Node.js, NestJS, Express, MongoDB) and maintained 95%+ coverage with Jest and Cypress.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <span class="node"></span>
+        <div class="tl-head"><h3>Full Stack Developer</h3><span class="co">· Genius Mind Zone</span><span class="when">Jul 2020 – Sep 2022</span></div>
+        <ul>
+          <li>Built Alaska ERP, a pharmacy POS / management system with offline-first architecture (IndexedDB, PouchDB) and real-time sync via Socket.IO.</li>
+          <li>Developed a global flight search and booking platform (Laravel, Vue.js) with real-time fare aggregation and multi-currency support.</li>
+          <li>Built an online Quran learning platform (MEVN) with Zoom API integration for live classes.</li>
+          <li>Implemented centralised state management (Vuex, Redux, Pinia) for scalable applications.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <span class="node"></span>
+        <div class="tl-head"><h3>Web Developer</h3><span class="co">· Ranksol</span><span class="when">Jan 2020 – Jun 2020</span></div>
+        <ul>
+          <li>Built responsive, cross-browser pages in HTML, CSS, JavaScript and React.js, translating UI/UX designs into pixel-perfect interfaces.</li>
+          <li>Developed and maintained server-side logic in Node.js and managed version control with Git.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <span class="node"></span>
+        <div class="tl-head"><h3>BS Computer Science</h3><span class="co">· Government College University, Faisalabad</span><span class="when">2015 – 2019</span></div>
+        <ul><li>Bachelor of Science in Computer Science.</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Portfolio</span>
+      <h2 class="h-title">Selected <span class="grad-text">projects</span></h2>
+      <p class="lead">A cross-section of platforms I've architected or built — across MERN, MEVN, Laravel and real-time / IoT stacks. Tap any card for details.</p>
+    </div>
+    <div class="filters reveal" id="filters">
+      <button class="active" data-f="all">All</button>
+      <button data-f="iot">AI &amp; IoT</button>
+      <button data-f="saas">SaaS Platforms</button>
+      <button data-f="market">Marketplaces</button>
+      <button data-f="fintech">FinTech &amp; Payments</button>
+      <button data-f="learn">E-Learning</button>
+    </div>
+    <div class="proj-grid" id="projGrid"></div>
+  </div>
+</section>
+
+<dialog id="pm">
+  <button class="m-close" id="pmClose" aria-label="Close"><svg><use href="#i-close"/></svg></button>
+  <div class="m-media" id="pmMedia"></div>
+  <div class="m-thumbs" id="pmThumbs"></div>
+  <div class="m-body">
+    <span class="m-tag" id="pmTag"></span>
+    <h3 id="pmTitle"></h3>
+    <p id="pmDesc"></p>
+    <div class="stack" id="pmStack"></div>
+    <p class="m-note" id="pmNote"></p>
+    <div class="m-actions" id="pmActions"></div>
+  </div>
+</dialog>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Services</span>
+      <h2 class="h-title">How I can <span class="grad-text">help your team</span></h2>
+      <p class="lead">Available for senior full-stack roles and freelance engagements — greenfield builds, rescues and scaling.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <div class="ic"><svg><use href="#i-server"/></svg></div>
+        <h3>Backend Architecture</h3>
+        <p>Scalable services in NestJS and Node.js with clean domain boundaries — from schema and API design to Docker deployment.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg><use href="#i-radio"/></svg></div>
+        <h3>Real-Time &amp; IoT Systems</h3>
+        <p>Telemetry ingestion and device integration (GPS, ELD, dashcams) over Socket.IO / WebSocket pipelines built to scale.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg><use href="#i-layers"/></svg></div>
+        <h3>Full-Stack Web Apps</h3>
+        <p>React, Next.js, Vue and Nuxt front ends wired to typed APIs, with state management and design-system discipline.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg><use href="#i-grid"/></svg></div>
+        <h3>APIs &amp; Microservices</h3>
+        <p>REST and GraphQL APIs, service decomposition, Redis caching and queueing for high-throughput workloads.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg><use href="#i-cloud"/></svg></div>
+        <h3>Cloud &amp; DevOps</h3>
+        <p>Dockerised deployments on AWS and Azure, CI/CD pipelines, environment management and observability.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg><use href="#i-bolt"/></svg></div>
+        <h3>AI-Accelerated Delivery</h3>
+        <p>Shipping faster with Claude, Copilot and Cursor — and integrating LLM APIs into products — without compromising quality.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Contact</span>
+      <h2 class="h-title">Let's build something <span class="grad-text">solid</span></h2>
+      <p class="lead">Tell me about the role or project — I usually reply within a day.</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-cards">
+        <a class="ct" href="mailto:sajjadkhan42601@gmail.com">
+          <span class="ic"><svg><use href="#i-mail"/></svg></span>
+          <span><b>Email</b><span>sajjadkhan42601@gmail.com</span></span>
+        </a>
+        <a class="ct" href="tel:+923110749045">
+          <span class="ic"><svg><use href="#i-phone"/></svg></span>
+          <span><b>Phone</b><span>+92 311 0749045</span></span>
+        </a>
+        <a class="ct" href="https://www.linkedin.com/in/muhammad-sajjad-4b8712175/" target="_blank" rel="noopener">
+          <span class="ic"><svg><use href="#i-linkedin"/></svg></span>
+          <span><b>LinkedIn</b><span>muhammad-sajjad-4b8712175</span></span>
+        </a>
+        <a class="ct" href="https://github.com/muhammadsajjad5240" target="_blank" rel="noopener">
+          <span class="ic"><svg><use href="#i-github"/></svg></span>
+          <span><b>GitHub</b><span>muhammadsajjad5240</span></span>
+        </a>
+        <div class="ct">
+          <span class="ic"><svg><use href="#i-pin"/></svg></span>
+          <span><b>Location</b><span>Lahore, Pakistan</span></span>
+        </div>
+      </div>
+      <form id="cform" action="mailto:sajjadkhan42601@gmail.com" method="post" enctype="text/plain">
+        <div class="two">
+          <div><label for="cn">Name</label><input id="cn" name="Name" required /></div>
+          <div><label for="ce">Email</label><input id="ce" name="Email" type="email" required /></div>
+        </div>
+        <div><label for="cs">Subject</label><input id="cs" name="Subject" /></div>
+        <div><label for="cm">Message</label><textarea id="cm" name="Message" required></textarea></div>
+        <button class="btn btn-primary" type="submit"><svg><use href="#i-arrow"/></svg>Send message</button>
+        <p style="color:var(--muted-2);font-size:.82rem">Opens your email client. Prefer direct? <a style="color:var(--accent)" href="mailto:sajjadkhan42601@gmail.com">sajjadkhan42601@gmail.com</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <p>© <span id="yr">2026</span> Muhammad Sajjad — Senior Software Engineer</p>
+    <div class="fs">
+      <a href="https://github.com/muhammadsajjad5240" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
+      <a href="https://www.linkedin.com/in/muhammad-sajjad-4b8712175/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
+      <a href="mailto:sajjadkhan42601@gmail.com" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<a id="totop" href="#top" aria-label="Back to top"><svg><use href="#i-up"/></svg></a>
+
+<script src="js/app.js" defer></script>
+</body>
 </html>
